@@ -105,6 +105,9 @@ The final visualizations, saved in the `visuals/` folder, include:
 ---
 
 ## 🧾 Presentation
+The final presentation is available here:  
+[2023 Cars Dataset Analysis – Google Drive Link](https://drive.google.com/yourlink)
+
 The final presentation (in the `presentation/` folder) summarizes:
 - Project purpose and scope
 - Data preparation steps
