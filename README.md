@@ -56,7 +56,7 @@ The main objective of this analysis is to examine how car specifications and pri
 2023-Cars-Dataset-Analysis/
 ├── data/                   
 │   └── 2023_Cars_Cleaned_BQ.csv
-├── queries/                
+├── sql/                
 │   ├── Step 1_Ask.sql
 │   ├── Step 2_Prepare.sql
 │   ├── Step 3_Process.sql
@@ -75,7 +75,7 @@ The main objective of this analysis is to examine how car specifications and pri
 ## 🧮 SQL Query (Horsepower vs. Mileage)
 
 ```sql
--- queries/Fuel Efficiency vs Horsepower Across Car Types.sql
+-- sql/Fuel Efficiency vs Horsepower Across Car Types.sql
 SELECT 
   Car_Make,
   AVG(Horsepower) AS avg_horsepower,
@@ -95,33 +95,28 @@ ORDER BY
 ---
 
 ## 📈 Analysis Output
-Visuals created (saved in the visuals/ folder) include:
-- 🎖️ Bar chart: Oscars across the years
-- 💰 Scatter plot: IMDb ratings vs. box office earnings
-- 📅 Timeline: evolution of Pixar films rating over time
-
-These images helped identify strong correlations between creative direction, target audience, and performance.
+The final visualizations, saved in the `visuals/` folder, include:
+- 🎖️ Horsepower vs. Fuel Efficiency: highlighting trade-offs across brands
+- 💰 Market Positioning by Car Make: showing how affordability, efficiency, and performance vary across manufacturers
 
 ---
 
 ## 🧾 Presentation
-The final presentation includes:
-- Purpose and business problem
-- Data preparation and modeling in BigQuery
-- Visualizations and trend insights
-- Practical recommendations
-
-View it in the slides/ folder.
+The final presentation (in the `presentation/` folder) summarizes:
+- Project purpose and scope
+- Data preparation steps
+- Key findings with visuals
+- Actionable recommendations
 
 ---
 
 ## ✅ Next Steps
-- Include a breakdown of sentiment based on genre or audience reception
-- Track creative team changes over time using network analysis
-- Create a public dashboard in Looker Studio
+- Expand analysis to include safety ratings and customer satisfaction
+- Compare EVs vs. traditional fuel vehicles for performance and efficiency
+- Build a dashboard version using Looker Studio for interactive exploration
 
 ---
 
 ## 🙌 Acknowledgments
-- Dataset courtesy of [Khaled Benali on Kaggle](https://www.kaggle.com/datasets/khaledxbenali/data-on-all-pixar-films-1995-2024)
-- Tools powered by Google Cloud, BigQuery, SQL, and open source communities.
+- Dataset courtesy of [Anoop Johny on Kaggle](https://www.kaggle.com/datasets/anoopjohny/2023-cars-dataset)
+- Tools powered by Google Cloud, BigQuery, SQL, Python and open source communities.
