@@ -1,3 +1,6 @@
+![GitHub Repo Size](https://img.shields.io/github/repo-size/ssagastume11/2023-Cars)
+![Last Commit](https://img.shields.io/github/last-commit/ssagastume11/2023-Cars)
+
 # 🚗 2023 Cars Dataset Analysis
 
 This project analyzes vehicle data from the 2023 Cars Dataset, with the goal of uncovering insights into performance, efficiency, pricing, and consumer preferences across different manufacturers and body types. The analysis highlights trade-offs between horsepower and fuel economy, identifies balanced brands, and explores how car attributes affect market positioning.
@@ -19,7 +22,7 @@ This project analyzes vehicle data from the 2023 Cars Dataset, with the goal of 
 - Year
 - Body Type
 - Fuel Type
-- Engine Line (L)
+- Engine Size (L)
 - Horsepower
 - Torque (Nm)
 - Transmission Type
