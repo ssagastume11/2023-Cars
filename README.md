@@ -19,6 +19,14 @@ This project analyzes vehicle data from the 2023 Cars Dataset, with the goal of 
 - Year
 - Body Type
 - Fuel Type
+- Engine Line (L)
+- Horsepower
+- Torque (Nm)
+- Transmission Type
+- Mileage (MPG)
+- Price (USD)
+- Customer Ratings
+- Sales Figures
 
 ---
 
