@@ -32,57 +32,64 @@ This project analyzes vehicle data from the 2023 Cars Dataset, with the goal of 
 
 ## 🔍 Business Task
 
-The objective of this project is to analyze how **Pixar’s production decisions** and **creative teams** impact film performance by:
+The main objective of this analysis is to examine how car specifications and pricing affect consumer preferences and market positioning by:
 
-- Identifying production traits of Oscar-winning films
-- Exploring how film ratings and creators relate to commercial and critical outcomes
-- Understanding how Pixar’s strategy evolved over time
+- Comparing price, horsepower, and mileage across manufacturers and body types
+- Identifying trade-offs between performance and efficiency
+- Highlighting brands that balance affordability and quality for different consumer segments
 
 ---
 
 ## 📊 Tools & Technology
 
 - **Google BigQuery** for cloud-based SQL analysis
-- **Google Sheets** for visualization and storytelling
-- **Git & GitHub** for version control
-- **PowerPoint / Google Slides** for presenting findings
-
+- **Google Sheets & Looker Studio** for visualization and storytelling
+- **Python (pandas, regex)** for data cleaning and preparation
+- **PowerPoint / Google Slides** for stakeholder presentation
+- **Git & GitHub** for version control and collaboration
+  
 ---
 
 ## 📁 Project Structure
 
 ```plaintext
-├── data/                
-│   └── academy.csv
-├── queries/            
-│   └── Oscar-winning films by Runtime and Release Year.sql
-├── charts/              
-│   └── Bar chart comparing Oscar wins across years.png
-├── presentation/        
-│   └── Pixar Film Analysis Presentation.pptx
+2023-Cars-Dataset-Analysis/
+├── data/                   
+│   └── 2023_Cars_Cleaned_BQ.csv
+├── queries/                
+│   ├── Step 1_Ask.sql
+│   ├── Step 2_Prepare.sql
+│   ├── Step 3_Process.sql
+│   ├── Step 4_Analyze.sql
+│   └── Step 6_Act.sql
+├── visuals/                
+│   ├── avg_horsepower, avg_mileage_mpg by Car_Make.png
+│   └── avg_mileage_mpg, avg_horsepower by Car_Make.png
+├── presentation/           
+│   └── 2023 Cars Dataset Analysis.pptx
 └── README.md
 ```
 
 ---
 
-## 🧮 SQL Query (Oscar-Winning Films)
+## 🧮 SQL Query (Horsepower vs. Mileage)
 
 ```sql
+-- queries/Fuel Efficiency vs Horsepower Across Car Types.sql
 SELECT 
-  f.film,
-  f.release_date,
-  a.award_type,
-  a.status
+  Car_Make,
+  AVG(Horsepower) AS avg_horsepower,
+  AVG(Mileage_MPG) AS avg_mileage_mpg,
+  COUNT(*) AS num_models
 FROM 
-  `plenary-ability-463920-b3.pixar_films_data.pixar_films` f
-JOIN 
-  `plenary-ability-463920-b3.pixar_films_data.academy_awards_cleaned` a
-ON 
-  f.film = a.film
+  `plenary-ability-463920-b3.cars_2023.cars_data_processed`
 WHERE 
-  a.status = 'Won'
+  Horsepower IS NOT NULL
+  AND Mileage_MPG IS NOT NULL
+GROUP BY 
+  Car_Make
 ORDER BY 
-  f.release_date;
+  avg_mileage_mpg DESC;
 ```
 
 ---
