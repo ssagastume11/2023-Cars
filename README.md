@@ -10,7 +10,7 @@ This project analyzes vehicle data from the 2023 Cars Dataset, with the goal of 
 **Provider**: Anoop Johny 
 **Filename**: 
 - `2023_Cars_Cleaned_BQ.csv`
-- 
+
 **Location**: Stored in the `data/` folder
 
 **Fields include**:
