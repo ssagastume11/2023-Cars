@@ -1,12 +1,10 @@
-Objective:
-Ensure the dataset is clean, consistent, and ready for analysis. This involves inspecting the structure, handling missing values, and creating a time-based column to support trend analysis.
+-- Objective:
 
-Key Actions:
+-- Ensure the 2023 Cars dataset is clean, consistent and ready for analysis in BigQuery by validating schema, identifying missing values, and checking for anomalies in categorical and numeric fields.
 
-Review the schema and preview the data
+-- Key Actions:
 
-Identify and handle any missing values
-
-Confirm date formatting
-
-Derive a order_month field to analyze monthly trends
+-- * Verify dataset structure and confirm that all fields were imported correctly.
+-- * Identify missing values in important numeric columns such as price, horsepower, mileage, and sales figures.
+-- * Review categorical fields (e.g., body type, fuel type, transmission) to ensure consistency.
+-- * Check ranges of numeric values to detect possible outliers or data entry issues.
